@@ -4,7 +4,7 @@ using namespace std;
 
 int main(){	
 	double m, r, p, mf, mr, x, y, ml;
-	double i = 1 ;
+	int i = 1 ;
 	cout << "Enter initial loan: ";
 	cin >> m ;
 	cout << "Enter interest rate per year (%): ";
