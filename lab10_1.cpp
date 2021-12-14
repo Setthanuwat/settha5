@@ -3,8 +3,8 @@
 using namespace std;
 
 int main(){	
-	double m, r, p, mf, mr, x, y, ml;
 	int i = 1 ;
+	double m, r, p, mf, mr, x, y, ml, mc;
 	cout << "Enter initial loan: ";
 	cin >> m ;
 	cout << "Enter interest rate per year (%): ";
@@ -21,12 +21,13 @@ int main(){
 	ml = m; 
 	while(m > 0)
 	{
-		if(ml > p)
+		if(ml > p || mc > p )
 		{
 			m = ml;
 			mr = m*r/100 ;
 			mf = m+mr;
 			ml = mf - p;
+			mc = ml*(100+r)/100;
 			cout << fixed << setprecision(2); 
 			cout << setw(13) << left << i; 
 			cout << setw(13) << left << m;
@@ -37,15 +38,14 @@ int main(){
 			cout << "\n";
 			i++;
 
-
 		}
 		else
 		{
-			y = ml ;
+			y  = ml ;
 			mr = ml*r/100 ;
 			mf = ml+mr ;
 			ml = mf ;
-			x = ml - mf ;
+			x  = ml - mf ;
 			cout << fixed << setprecision(2); 
 			cout << setw(13) << left << i; 
 			cout << setw(13) << left << y;
